@@ -2,11 +2,11 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+   
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
      <style>
       body {
@@ -22,29 +22,30 @@
     {% load static %}
 
   <h5><img src="{% static 'image/Image.png' %}" alt="My image" width="100" height="height">
-    <span class="badge badge-danger">hello there</span></h5></div><!--hello there-->
+    <span class="badge badge-danger">hello there</span></h5></div><!--hello there and image-->
 
     <p style="color:beige">This is a function which converts decimal to binary and checks whether the binary has consecutives 1's
     <br>enter the range of numbers and click the checkbox and submit<br>
+    max length is 20<br>
+    <!--description of the function-->
   </p>
      
 <div class="container">
 
   <form action='/analyze' method='post'>
-   
+<!--here form is created in which we need to feed the information after the submit the action to  be thrown to /anaylze would take place-->   
     <input type="checkbox" name="n1" >
       <label for="n1"><span class="badge badge-danger">start</span>:</label>
-      <input type="number" id="qu1" name="n1" min="0" max="20"><br>
+      <input type="number" id="n1" name="n1" min="0" max="20"><br>
        <input type="checkbox" name="n2" >
       <label for="n2"><span class="badge badge-danger">stop</span>:</label>
       <input type="number" id="n2" name="n2" min="0" max="20"><br>
       <input type="submit" value="Submit">
-      {% csrf_token %}
+      {% csrf_token %}<!--csrf is used when method is post it's  used for security reasons-->
     </form> 
     
 </div>
- <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
